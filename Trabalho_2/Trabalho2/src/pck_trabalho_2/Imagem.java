@@ -1,8 +1,7 @@
 package pck_trabalho_2;
 
 public class Imagem {
-	
-	
+		
 	public class Matriz {
 	    
 	    private int width;
