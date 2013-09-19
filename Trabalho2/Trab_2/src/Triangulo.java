@@ -3,9 +3,11 @@ public class Triangulo {
 	private Ponto p0, p1, p2;
 	
 	public void setVertices(Ponto p0, Ponto p1, Ponto p2){
-
+		this.p0 = p0;
+		
 		
 	}
+	/*
 	public Ponto getP0() {
 		return p0;
 	}
@@ -28,5 +30,5 @@ public class Triangulo {
 	public void setP2(Ponto p2) {
 		this.p2 = p2;
 	}
-
+	*/
 }

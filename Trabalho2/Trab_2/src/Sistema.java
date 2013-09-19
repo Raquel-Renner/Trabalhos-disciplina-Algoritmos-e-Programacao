@@ -40,15 +40,16 @@ public class Sistema {
 		Ponto p2 = new Ponto();	
 		
 		if (cmd.equals("triangulo")) {
-			p0.x0 = sc.nextInt();
-			p0.y0 = sc.nextInt();
-			triangulo.setP0(p0);
-			p1.x1 = sc.nextInt();
-			p1.y1 = sc.nextInt();
-			triangulo.setP1(p1);
-			p2.x2 = sc.nextInt();
-			p2.y2 = sc.nextInt();
-			triangulo.setP2(p2);	
+			p0.x = sc.nextInt();
+			p0.y = sc.nextInt();
+			//triangulo.setP0(p0);
+			p1.x = sc.nextInt();
+			p1.y = sc.nextInt();
+			//triangulo.setP1(p1);
+			p2.x = sc.nextInt();
+			p2.y = sc.nextInt();
+			//triangulo.setP2(p2);
+			 triangulo.setVertices(p0, p1, p2);
 		}
 }
 	public static void entCirculo(){
