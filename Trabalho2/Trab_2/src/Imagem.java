@@ -52,9 +52,12 @@ public class Imagem {
 	        }	       
 	        m.printImage(System.out);
 	    }
+	    /*public void setPixel(Cor c, Ponto p0;){
+	     * }
+	     * */
 	    
-	    public void Addshape(Shape s, Cor c){
+	    //public void Addshape(Shape s, Cor c){
 	    	
-	    }
+	    //}
 	    
 }

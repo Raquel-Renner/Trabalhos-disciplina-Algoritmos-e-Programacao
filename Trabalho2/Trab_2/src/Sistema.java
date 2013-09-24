@@ -9,15 +9,14 @@ public class Sistema {
 	static Triangulo triangulo = new Triangulo();
 	static Circulo circulo = new Circulo();
 	static Retangulo retangulo = new Retangulo();
+	static Reta reta = new Reta();
     
 	int i = sc.nextInt();
 	public static String cmd = "";
-	
-	   
+		   
 	public static void main(String[] args) {
 		
-		String cmd = "";
-		
+		String cmd = "";		
 		
 		while (!cmd.equals("fim")) {
 			cmd = sc.next();
@@ -30,8 +29,10 @@ public class Sistema {
 			if(cmd.equals("retangulo")){
 				entRetangulo();			
 			}
-		}
-		
+			if(cmd.equals("reta")){
+				entReta();				
+			}
+		}		
 	}
 	
 	public static void entTriangulo(){//pq tem o metodo com Static void man todos os outros serão...
@@ -41,34 +42,46 @@ public class Sistema {
 		
 		if (cmd.equals("triangulo")) {
 			p0.x = sc.nextInt();
-			p0.y = sc.nextInt();
-			//triangulo.setP0(p0);
+			p0.y = sc.nextInt();		
 			p1.x = sc.nextInt();
-			p1.y = sc.nextInt();
-			//triangulo.setP1(p1);
+			p1.y = sc.nextInt();		
 			p2.x = sc.nextInt();
-			p2.y = sc.nextInt();
-			//triangulo.setP2(p2);
-			 triangulo.setVertices(p0, p1, p2);
+			p2.y = sc.nextInt();		
+			triangulo.setVertices(p0, p1, p2);
 		}
 }
+	
 	public static void entCirculo(){
 		Ponto p0 = new Ponto();
-		p0.x0 = sc.nextInt();
-		p0.y0 = sc.nextInt();
-		circulo.setP0(p0);
-		circulo.setRaio(sc.nextInt());		
+		private int raio; 							///pq erro???????
+		
+		p0.x = sc.nextInt();
+		p0.y = sc.nextInt();
+		circulo.setCentro(p0);
+		circulo.setRaio(raio);		
 	}
 	
 	public static void entRetangulo(){
 		Ponto p0 = new Ponto();
 		Ponto p1 = new Ponto();
 		
-		p0.x0 = sc.nextInt();
-		p0.y0 = sc.nextInt();
-		p1.x1 = sc.nextInt();
-		p1.y1 = sc.nextInt();
-		retangulo.setp0(p0);
-		retangulo.setp1(p1);
+		p0.x = sc.nextInt();
+		p0.y = sc.nextInt();
+		p1.x = sc.nextInt();
+		p1.y = sc.nextInt();
+		retangulo.setvertices(p0, p1);		
+	}
+
+	public static void entReta(){
+		Ponto p0 = new Ponto();
+		Ponto p1 = new Ponto();
+		
+		p0.x = sc.nextInt();
+		p0.y = sc.nextInt();
+		p1.x = sc.nextInt();
+		p1.y = sc.nextInt();
+		
+		reta.setvertices(p0, p1);		
 	}
 }
+
