@@ -13,10 +13,10 @@ public class Triangulo {
 		reta.setVertices(p0, p1);
 		reta.desenhaReta(cor, img);
 		
-		reta.setVertices(p0, p1);
+		reta.setVertices(p0, p2);
 		reta.desenhaReta(cor, img);
 		
-		reta.setVertices(p0, p1);
+		reta.setVertices(p2, p1);
 		reta.desenhaReta(cor, img);		
 	}
 }

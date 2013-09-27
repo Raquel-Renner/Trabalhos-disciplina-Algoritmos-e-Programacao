@@ -1,7 +1,5 @@
 
 public class Cor {
-	private Cor c;
-	private Ponto p0;
 	
 	private int red;
 	private int green;
