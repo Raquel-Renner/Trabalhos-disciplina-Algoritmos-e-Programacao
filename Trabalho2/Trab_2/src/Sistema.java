@@ -13,6 +13,8 @@ public class Sistema {
     
 	int i = sc.nextInt();
 	public static String cmd = "";
+	Imagem img = new Imagem(0, 0, "");
+	Cor cor = new Cor(0);
 		   
 	public static void main(String[] args) {
 		
@@ -52,13 +54,16 @@ public class Sistema {
 }
 	
 	public static void entCirculo(){
-		Ponto p0 = new Ponto();
-		private int raio; 							///pq erro???????
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int raio = sc.nextInt();
+		Imagem img = new Imagem(0, 0, "");
+		Cor cor = new Cor(0);
 		
-		p0.x = sc.nextInt();
-		p0.y = sc.nextInt();
-		circulo.setCentro(p0);
-		circulo.setRaio(raio);		
+		Circulo circulo = new Circulo( );
+		circulo.setCentro(x, y);
+		circulo.setRaio(raio);
+		circulo.desenhaCirculo(cor, img);	
 	}
 	
 	public static void entRetangulo(){
@@ -69,7 +74,7 @@ public class Sistema {
 		p0.y = sc.nextInt();
 		p1.x = sc.nextInt();
 		p1.y = sc.nextInt();
-		retangulo.setvertices(p0, p1);		
+		retangulo.setVertices(p0, p1);		
 	}
 
 	public static void entReta(){
@@ -81,7 +86,7 @@ public class Sistema {
 		p1.x = sc.nextInt();
 		p1.y = sc.nextInt();
 		
-		reta.setvertices(p0, p1);		
+		reta.setVertices(p0, p1);		
 	}
 }
 

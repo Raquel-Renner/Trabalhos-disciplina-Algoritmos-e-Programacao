@@ -7,4 +7,16 @@ public class Triangulo {
 		this.p1 = p1;
 		this.p2 = p2;
 	}
+	
+	public void desenhaTriangulo(Cor cor, Imagem img) {
+		Reta reta = new Reta();
+		reta.setVertices(p0, p1);
+		reta.desenhaReta(cor, img);
+		
+		reta.setVertices(p0, p1);
+		reta.desenhaReta(cor, img);
+		
+		reta.setVertices(p0, p1);
+		reta.desenhaReta(cor, img);		
+	}
 }
