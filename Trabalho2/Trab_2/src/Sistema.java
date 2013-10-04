@@ -13,6 +13,7 @@ public class Sistema {
     
 	int i = sc.nextInt();
 	public static String cmd = "";
+	static Imagem img = new Imagem(0,0,"");
 
 		   
 	public static void main(String[] args) {
@@ -44,16 +45,8 @@ public class Sistema {
 				cor = new Cor(red, green, blue);
 			}
 		}
-		
-		if(cmd.equalsIgnoreCase("salvar")){
-			String nomeArq = sc.next();			
-			try {
-				img.Salvar(nomeArq);
-			} 
-			catch (IOException e) {					
-				e.printStackTrace();
-			}
-		}
+						
+		System.out.println("Digite a forma Desejada:");
 		
 		while (!cmd.equals("fim")) {
 			cmd = sc.next();
@@ -69,6 +62,15 @@ public class Sistema {
 			if(cmd.equals("reta")){
 				entReta();				
 			}
+			if(cmd.equals("salvar")){
+				try{
+					ComandoSalvar();
+					}
+					catch (Exception e){
+						System.out.println(e);
+					}								
+			}
+			
 		}		
 	}
 	
@@ -134,6 +136,12 @@ public class Sistema {
 		
 		reta.setVertices(p0, p1);
 		reta.desenhaReta(cor, img);
+	}
+	public static void ComandoSalvar() throws IOException{
+		
+		String aux = sc.next();
+		img.Salvar(aux);	
+		
 	}
 }
 
